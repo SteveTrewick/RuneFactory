@@ -57,7 +57,7 @@ public struct SymbolMap {
     let tokenKind : String
     let entityKind: String?
     let system    : Bool
-    
+    let name      : String?
 }
 
 
@@ -103,7 +103,8 @@ struct CursorMapper {
                     length    : token.length,
                     tokenKind : token.kind,
                     entityKind: cursorInfo.kind,
-                    system    : cursorInfo.is_system != nil
+                    system    : cursorInfo.is_system != nil,
+                    name      : cursorInfo.name
                 )
             )
         }
