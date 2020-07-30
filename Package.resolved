@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CSourceKitD",
+        "repositoryURL": "https://github.com/SteveTrewick/CSourceKitD.git",
+        "state": {
+          "branch": null,
+          "revision": "f883b505e64f24824c3ef2aee30754f49431be92",
+          "version": "1.0.2"
+        }
+      },
+      {
+        "package": "SourceKitHipster",
+        "repositoryURL": "https://github.com/SteveTrewick/SourceKitHipster",
+        "state": {
+          "branch": null,
+          "revision": "c300ca650ef83fcf21e4dfad99fae9b9caf8dbbd",
+          "version": "1.0.6"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
