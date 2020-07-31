@@ -9,7 +9,7 @@ public struct Symbolicator {
     
     public init() {}
     
-    public func symbolicate (source : String ) -> [SymbolMap] {
+    public func symbolicate (source : String ) -> [Rune] {
         
         let decoder      = JSONDecoder()
         let tokenMapper  = TokenMapper()

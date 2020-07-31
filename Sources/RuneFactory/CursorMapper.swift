@@ -3,7 +3,7 @@ import Foundation
 import SourceKitHipster
 
 
-public struct SymbolMap {
+public struct Rune {
     
     let offset    : Int
     let length    : Int
@@ -32,8 +32,8 @@ struct CursorMapper {
     }
     
     
-    func cursormap ( sourcekit: SKHipster, tokenmap : [TokenMap], decoder: JSONDecoder ) -> [SymbolMap] {
-        var symbols : [SymbolMap] = [ ]
+    func cursormap ( sourcekit: SKHipster, tokenmap : [TokenMap], decoder: JSONDecoder ) -> [Rune] {
+        var symbols : [Rune] = [ ]
         
         for token in tokenmap {
             let response = sourcekit.cursor(offset: token.offset)
@@ -46,7 +46,7 @@ struct CursorMapper {
             }
             
             symbols.append (
-                SymbolMap (
+                Rune (
                     offset    : token.offset,
                     length    : token.length,
                     tokenKind : token.kind,
