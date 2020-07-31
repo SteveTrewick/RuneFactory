@@ -2,7 +2,7 @@
 
 RuneFactory is a component of Sigil - a Swift syntax highlighting tool.
 
-It uses SourceKIt Hipster to produce a symbol map of your Swift code that conatins information 
+It uses [SourceKIt Hipster](https://github.com/SteveTrewick/SourceKitHipster) to produce a symbol map of your Swift code that conatins information 
 useful for a syntax highlighter.
 
 
@@ -26,7 +26,7 @@ Feed it some Swift source code and it will return an array of :
     }
 
 
-Token and entity kinds returned by the underlying calls to SourceKit look  like this - these listings may be incomplete.
+Token and entity kinds returned by the underlying calls to [SourceKit](https://github.com/apple/swift/tree/master/tools/SourceKit) look  like this - these listings may be incomplete.
 
 ```SymbolMap.tokenKind``` 
 
