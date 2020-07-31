@@ -15,7 +15,7 @@ It exposes a single public API :
 
 Feed it some Swift source code and it will return an array of :
 
-    public struct SymbolMap {
+    public struct Rune {
         
         let offset    : Int            // language token offset in source file
         let length    : Int            // length of token
