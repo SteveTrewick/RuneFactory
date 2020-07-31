@@ -5,7 +5,7 @@ import Foundation
 import SourceKitHipster
 
 
-public struct Symbolicator {
+public struct Foundry {
     
     public init() {}
     

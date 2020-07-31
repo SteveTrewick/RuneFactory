@@ -9,7 +9,7 @@ useful for a syntax highlighter.
 It exposes a single public API :
 
 
-    RuneFactory.Symbolicator().symbolicate (source : String ) -> [SymbolMap] 
+    RuneFactory.Foundry().symbolicate (source : String ) -> [SymbolMap] 
 
 
 
