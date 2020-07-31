@@ -5,9 +5,6 @@ import Foundation
 import SourceKitHipster
 
 
-
-
-
 public struct Symbolicator {
     
     public init() {}
