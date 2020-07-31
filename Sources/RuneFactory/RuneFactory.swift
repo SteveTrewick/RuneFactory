@@ -33,9 +33,7 @@ struct SyntaxMap : Codable {
 
 struct TokenMapper {
     
-    let decoder = JSONDecoder()
-    
-    func tokenmap ( sourcekit: SKHipster ) -> [TokenMap] {
+    func tokenmap ( sourcekit: SKHipster, decoder: JSONDecoder ) -> [TokenMap] {
         
         let responseJSON = sourcekit.syntaxMap()
         
@@ -79,9 +77,7 @@ struct CursorMapper {
     }
     
     
-    let decoder = JSONDecoder()
-    
-    func cursormap ( sourcekit: SKHipster, tokenmap : [TokenMap] ) -> [SymbolMap] {
+    func cursormap ( sourcekit: SKHipster, tokenmap : [TokenMap], decoder: JSONDecoder ) -> [SymbolMap] {
         var symbols : [SymbolMap] = [ ]
         
         for token in tokenmap {
@@ -110,5 +106,24 @@ struct CursorMapper {
         }
         
         return symbols
+    }
+}
+
+
+public struct Symbolicator {
+    
+    public init() {}
+    
+    public func symbolicate (source : String ) -> [SymbolMap] {
+        
+        let decoder      = JSONDecoder()
+        let tokenMapper  = TokenMapper()
+        let cursorMapper = CursorMapper()
+        let sourceKit    = SKHipster(source: source)
+        
+        let tokenMaps     = tokenMapper.tokenmap(sourcekit: sourceKit, decoder: decoder)
+        let symbolMaps    = cursorMapper.cursormap(sourcekit: sourceKit, tokenmap: tokenMaps, decoder: decoder)
+    
+        return symbolMaps
     }
 }
