@@ -5,12 +5,12 @@ import SourceKitHipster
 
 public struct Rune {
     
-    let offset    : Int
-    let length    : Int
-    let tokenKind : String
-    let entityKind: String?
-    let system    : Bool
-    let name      : String?
+    public let offset    : Int
+    public let length    : Int
+    public let tokenKind : String
+    public let entityKind: String?
+    public let system    : Bool
+    public let name      : String?
 }
 
 
