@@ -44,9 +44,6 @@ struct CursorMapper {
                 print("RuneFactory : couldn't decode cursor info from JSON response")
                 return []
             }
-            // if the diagnostic key was set, no info was returned for this
-            // token. This is expected.
-            if cursorInfo.diagnostic != nil { continue }
             
             symbols.append (
                 SymbolMap (
